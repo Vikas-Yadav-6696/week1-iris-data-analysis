@@ -1,193 +1,217 @@
-# Week 1 — Data Acquisition, Cleaning & Exploratory Data Analysis
+#  Iris Data Analysis — Week 1
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-orange)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-green)
-![Seaborn](https://img.shields.io/badge/Seaborn-EDA-purple)
-![Scikit--learn](https://img.shields.io/badge/Scikit--learn-Machine%20Learning-red)
+<div align="center">
 
-## 📌 Project Overview
+### 📊 Data Acquisition • 🧹 Data Cleaning • 🔎 EDA • 📈 Visualization
 
-This repository contains my **Week 1 Data Science Internship project**, focused on the fundamental stages of a data science workflow:
+**A complete beginner-to-professional Data Science workflow using Python**
 
-- Public dataset acquisition
-- Data inspection and quality assessment
-- Missing-value handling
-- Duplicate detection and removal
-- Data-type correction
-- Data preprocessing
-- Descriptive statistics
-- Exploratory Data Analysis (EDA)
-- Data visualization
-- Documentation and reproducibility
+<br>
 
-The project uses the **Iris dataset**, a publicly available dataset from the **UCI Machine Learning Repository**.
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge\&logo=python)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge\&logo=pandas)
+![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-013243?style=for-the-badge\&logo=numpy)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557c?style=for-the-badge)
+![Seaborn](https://img.shields.io/badge/Seaborn-EDA-4c72b0?style=for-the-badge)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?style=for-the-badge\&logo=jupyter)
+
+<br>
+
+[📂 Repository](https://github.com/Vikas-Yadav-6696/week1-iris-data-analysis)
+  •  
+[📊 UCI Dataset](https://archive.ics.uci.edu/dataset/53/iris)
+
+</div>
+
+---
+
+## 🚀 Project Overview
+
+Welcome to my **Week 1 Data Science Internship Project**!
+
+This project demonstrates the complete process of taking a public dataset from **raw data → data quality checking → cleaning → exploratory analysis → visualization → insights**.
+
+The project uses the classic **Iris Dataset** from the **UCI Machine Learning Repository**.
+
+> 💡 **Goal:** Build a clean, reproducible and well-documented data-analysis pipeline that can serve as the foundation for future machine-learning projects.
+
+---
+
+## 📌 Project Highlights
+
+| 📌 Component           | Details                         |
+| ---------------------- | ------------------------------- |
+| 📊 Dataset             | Iris Dataset                    |
+| 🏛️ Source             | UCI Machine Learning Repository |
+| 🔢 Original Records    | **150**                         |
+| 🌸 Species             | **3**                           |
+| 📏 Numerical Features  | **4**                           |
+| 🧹 Missing Values      | **5 simulated & handled**       |
+| ♻️ Duplicate Records   | **Detected & removed**          |
+| 📦 Final Clean Dataset | **149 rows × 5 columns**        |
+| 📈 Visualizations      | **4**                           |
+| 🐍 Language            | **Python**                      |
+| 📓 Notebook            | **Jupyter**                     |
 
 ---
 
 ## 🎯 Objectives
 
-The main objectives of this project are to:
+This project focuses on the core foundations of a Data Science workflow:
 
-1. Acquire a publicly available dataset.
-2. Understand the structure and characteristics of the data.
-3. Identify potential data-quality issues.
-4. Apply appropriate data-cleaning techniques.
-5. Perform exploratory analysis using Python.
-6. Create meaningful visualizations.
-7. Identify important patterns and relationships.
-8. Document the complete workflow in a reproducible manner.
+* 📥 Acquire a publicly available dataset
+* 🔍 Inspect dataset structure and quality
+* 🧹 Identify and handle missing values
+* ♻️ Detect and remove duplicate records
+* 🔄 Standardize data types
+* 📊 Generate descriptive statistics
+* 📈 Perform Exploratory Data Analysis
+* 🎨 Create meaningful visualizations
+* 💡 Extract useful insights
+* 📝 Document the complete workflow
 
 ---
 
-## 📊 Dataset
+#  Dataset
 
 ### Iris Dataset
 
-**Source:** UCI Machine Learning Repository  
-**Dataset ID:** 53  
-**Official Source:** https://archive.ics.uci.edu/dataset/53/iris
+**Source:** UCI Machine Learning Repository
+**Dataset ID:** 53
 
-The Iris dataset contains measurements of flowers belonging to three Iris species.
+🔗 **Official Dataset:**
+https://archive.ics.uci.edu/dataset/53/iris
 
-### Features
+The original dataset contains:
 
-| Feature | Description | Data Type |
-|---|---|---|
-| `sepal_length` | Sepal length in centimeters | Numerical |
-| `sepal_width` | Sepal width in centimeters | Numerical |
-| `petal_length` | Petal length in centimeters | Numerical |
-| `petal_width` | Petal width in centimeters | Numerical |
-| `species` | Iris flower species | Categorical |
+* **150 observations**
+* **4 numerical features**
+* **3 Iris species**
+* **50 observations per species**
 
-The original dataset contains **150 observations** distributed across three species.
+### 📋 Features
 
-### Species
+| Feature           | Description        | Type        |
+| ----------------- | ------------------ | ----------- |
+| 🌿 `sepal_length` | Sepal length in cm | Numerical   |
+| 🌿 `sepal_width`  | Sepal width in cm  | Numerical   |
+| 🌺 `petal_length` | Petal length in cm | Numerical   |
+| 🌺 `petal_width`  | Petal width in cm  | Numerical   |
+| 🏷️ `species`     | Iris species       | Categorical |
 
-- Iris Setosa
-- Iris Versicolor
-- Iris Virginica
-
-> **Important note:** The original UCI Iris dataset does not contain missing values. To demonstrate the data-cleaning techniques required for this internship task, a working copy was created with five controlled missing numerical values and three intentionally added duplicate records. These simulated issues are clearly identified in the analysis code and report.
-
----
-
-## 🛠️ Technologies Used
-
-- **Python 3.10+**
-- **Pandas** — data manipulation and preprocessing
-- **NumPy** — numerical operations
-- **Matplotlib** — data visualization
-- **Seaborn** — statistical visualization
-- **Scikit-learn** — dataset loading and data-science utilities
-
----
-
-## 📁 Project Structure
+###  Species
 
 ```text
-week1-iris-data-analysis/
-│
-├── data/
-│   ├── raw/
-│   │   └── README.md
-│   └── processed/
-│       └── iris_cleaned.csv
-│
-├── notebooks/
-│   └── Week_1_Iris_Data_Acquisition_Cleaning_EDA_FINAL.ipynb
-│
-├── src/
-│   └── week1_eda.py
-│
-├── reports/
-│   └── figures/
-│       ├── 01_missing_values.png
-│       ├── 02_class_distribution.png
-│       ├── 03_petal_scatter.png
-│       └── 04_correlation_heatmap.png
-│
-├── docs/
-│   └── Week_1_Data_Acquisition_Cleaning_EDA_Report.docx
-│
-├── requirements.txt
-├── PROJECT_INFO.md
-├── LICENSE
-├── .gitignore
-└── README.md
+Iris Setosa
+Iris Versicolor
+Iris Virginica
+```
+
+> ⚠️ **Data Quality Simulation:**
+> The original UCI dataset is clean and contains no missing values. For this internship task, I created a working copy with **5 controlled missing numerical values** and **duplicate records** so that the complete cleaning workflow could be demonstrated.
+
+---
+
+# 🛠️ Tech Stack
+
+<div align="center">
+
+| Technology              | Purpose                        |
+| ----------------------- | ------------------------------ |
+| 🐍 **Python**           | Core programming language      |
+| 🐼 **Pandas**           | Data manipulation              |
+| 🔢 **NumPy**            | Numerical operations           |
+| 📊 **Matplotlib**       | Visualization                  |
+| 🎨 **Seaborn**          | Statistical visualization      |
+| 🤖 **Scikit-learn**     | Dataset loading & ML utilities |
+| 📓 **Jupyter Notebook** | Interactive analysis           |
+
+</div>
+
+---
+
+# 🔄 Data Science Workflow
+
+```text
+                🌐 PUBLIC DATASET
+                       │
+                       ▼
+                📥 DATA ACQUISITION
+                       │
+                       ▼
+                🔍 DATA INSPECTION
+                       │
+                       ▼
+             ⚠️ DATA QUALITY CHECK
+                       │
+             ┌─────────┴─────────┐
+             ▼                   ▼
+       Missing Values       Duplicate Rows
+             │                   │
+             ▼                   ▼
+      Median Imputation     Remove Duplicates
+             │                   │
+             └─────────┬─────────┘
+                       ▼
+                🧹 CLEAN DATA
+                       │
+                       ▼
+                📊 DESCRIPTIVE EDA
+                       │
+                       ▼
+                📈 VISUALIZATION
+                       │
+                       ▼
+                  💡 INSIGHTS
+                       │
+                       ▼
+              🚀 FUTURE ML MODELS
 ```
 
 ---
 
-## 🔄 Data Science Workflow
+# 🧹 Data Cleaning
 
-```text
-Public Dataset
-      ↓
-Data Acquisition
-      ↓
-Data Inspection
-      ↓
-Data Quality Assessment
-      ↓
-Data Cleaning
-      ↓
-Data Type Standardization
-      ↓
-Exploratory Data Analysis
-      ↓
-Visualization
-      ↓
-Insights & Interpretation
-      ↓
-Cleaned Dataset
-```
+## 1️⃣ Missing Values
 
----
+Five missing numerical values were intentionally introduced to simulate a real-world data-quality problem.
 
-## 🧹 Data Cleaning
-
-### 1. Missing Values
-
-Five controlled missing values were introduced into numerical columns for demonstration purposes.
-
-The missing values were handled using **median imputation**:
+Missing values were handled using **median imputation**.
 
 ```python
-for column in numeric_cols:
-    df[column] = pd.to_numeric(
-        df[column],
-        errors="coerce"
-    )
-
+for column in numeric_columns:
     df[column] = df[column].fillna(
         df[column].median()
     )
 ```
 
-### Why Median Imputation?
+### Why Median?
 
-The median is less affected by unusually large or small observations than the mean and allows the existing observations to be retained.
+Median imputation is useful because it is less sensitive to extreme values than mean imputation.
 
-### 2. Duplicate Records
+---
 
-Duplicate records were identified using:
+## 2️⃣ Duplicate Detection
+
+Duplicates were identified using:
 
 ```python
 df.duplicated().sum()
 ```
 
-They were removed using:
+Duplicates were removed using:
 
 ```python
 df = df.drop_duplicates()
 ```
 
-Removing duplicates prevents repeated observations from having disproportionate influence on descriptive statistics and future models.
+This prevents repeated observations from affecting statistics and future machine-learning models.
 
-### 3. Data Types
+---
 
-Numerical measurements were converted to numeric data types, while the species variable was converted to a categorical type:
+## 3️⃣ Data Type Standardization
+
+Numerical columns were converted to numeric values and the species column was treated as categorical data.
 
 ```python
 df["species"] = df["species"].astype("category")
@@ -195,63 +219,153 @@ df["species"] = df["species"].astype("category")
 
 ---
 
-## 📈 Exploratory Data Analysis
+# 📊 Exploratory Data Analysis
 
-The cleaned dataset was explored using descriptive statistics and four visualizations.
-
-### Visualization 1 — Missing Values
-
-![Missing Values](reports/figures/01_missing_values.png)
-
-This visualization compares missing values before and after preprocessing. The simulated missing values are removed after median imputation.
-
-### Visualization 2 — Class Distribution
-
-![Class Distribution](reports/figures/02_class_distribution.png)
-
-The original Iris dataset contains three species with balanced representation, with 50 observations per species.
-
-### Visualization 3 — Petal Length vs Petal Width
-
-![Petal Scatter](reports/figures/03_petal_scatter.png)
-
-The scatter plot shows the relationship between petal length and petal width. Setosa is visually separated from the other species, while Versicolor and Virginica show greater overlap.
-
-### Visualization 4 — Correlation Heatmap
-
-![Correlation Heatmap](reports/figures/04_correlation_heatmap.png)
-
-The correlation matrix illustrates relationships between the numerical features. The petal measurements show particularly strong positive correlation.
+The project contains **four main visualizations**.
 
 ---
 
-## 🔍 Key Findings
+## 📉 1. Missing Values
 
-- The dataset contains three balanced Iris species.
-- Petal measurements have strong relationships with each other.
-- Petal length and petal width provide useful visual separation between species.
-- Setosa is particularly distinct from Versicolor and Virginica using petal measurements.
-- Versicolor and Virginica have greater overlap and may require multiple features for classification.
-- The cleaning pipeline successfully handles the simulated missing values and duplicate records.
-- Correlated features should be considered carefully during future predictive modeling.
+Shows the simulated missing values before cleaning and confirms that the cleaning process removes them.
+
+📁 File:
+
+```text
+reports/figures/01_missing_values.png
+```
 
 ---
 
-## ▶️ Installation
+## 🌸 2. Species Distribution
 
-Clone the repository:
+The original dataset contains:
+
+```text
+Setosa       → 50
+Versicolor   → 50
+Virginica    → 50
+```
+
+After duplicate removal, the final working dataset contains:
+
+```text
+149 observations
+```
+
+📁 File:
+
+```text
+reports/figures/02_class_distribution.png
+```
+
+---
+
+## 🌺 3. Petal Length vs Petal Width
+
+This visualization explores the relationship between petal length and petal width.
+
+### Observation
+
+Setosa forms a relatively distinct cluster, while Versicolor and Virginica show more overlap.
+
+📁 File:
+
+```text
+reports/figures/03_petal_scatter.png
+```
+
+---
+
+## 🔥 4. Correlation Heatmap
+
+The correlation heatmap shows relationships between numerical variables.
+
+The petal measurements show particularly strong positive relationships.
+
+📁 File:
+
+```text
+reports/figures/04_correlation_heatmap.png
+```
+
+---
+
+# 💡 Key Insights
+
+### 🌸 Insight 1 — Balanced Original Dataset
+
+The original dataset contains **50 observations per species**, giving all three classes equal representation.
+
+### 🧹 Insight 2 — Data Cleaning Matters
+
+The simulated missing values and duplicate records demonstrate how preprocessing can improve data quality before analysis.
+
+### 🌺 Insight 3 — Petal Features Are Important
+
+Petal length and petal width show strong relationships and provide useful visual separation between species.
+
+### 🔎 Insight 4 — Setosa Is Distinct
+
+Setosa is visually separated from the other species in petal measurements.
+
+### 🔄 Insight 5 — Versicolor & Virginica Overlap
+
+Versicolor and Virginica have greater overlap, suggesting that multiple features may be useful for future classification.
+
+---
+
+# 📁 Project Structure
+
+```text
+week1-iris-data-analysis/
+│
+├── 📂 data/
+│   ├── 📂 raw/
+│   │   └── README.md
+│   └── 📂 processed/
+│       └── iris_cleaned.csv
+│
+├── 📂 notebooks/
+│   └── Week_1_Iris_Data_Acquisition_Cleaning_EDA_FINAL.ipynb
+│
+├── 📂 src/
+│   └── week1_eda.py
+│
+├── 📂 reports/
+│   └── 📂 figures/
+│       ├── 01_missing_values.png
+│       ├── 02_class_distribution.png
+│       ├── 03_petal_scatter.png
+│       └── 04_correlation_heatmap.png
+│
+├── 📂 docs/
+│   └── Week_1_Data_Acquisition_Cleaning_EDA_Report.docx
+│
+├── 📄 requirements.txt
+├── 📄 PROJECT_INFO.md
+├── 📄 LICENSE
+├── 📄 .gitignore
+└── 📄 README.md
+```
+
+---
+
+# ▶️ Getting Started
+
+## 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/Vikas-Yadav-6696/week1-iris-data-analysis.git
 ```
 
-Move into the project directory:
-
 ```bash
 cd week1-iris-data-analysis
 ```
 
-Create a virtual environment:
+---
+
+## 2️⃣ Create Virtual Environment
 
 ```bash
 python -m venv .venv
@@ -269,7 +383,9 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-Install dependencies:
+---
+
+## 3️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -277,114 +393,163 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Running the Project
+# ▶️ Run the Analysis
 
-Run the main analysis script:
+### Python Script
 
 ```bash
 python src/week1_eda.py
 ```
 
-The script:
+### Jupyter Notebook
 
-1. Loads the Iris dataset.
-2. Standardizes column names.
-3. Creates a working dataset.
-4. Introduces controlled missing values for cleaning demonstration.
-5. Introduces controlled duplicate records.
-6. Checks missing values and duplicates.
-7. Performs median imputation.
-8. Removes duplicates.
-9. Corrects data types.
-10. Calculates descriptive statistics.
-11. Generates four visualizations.
-12. Saves the cleaned dataset.
+```bash
+jupyter notebook
+```
+
+Then open:
+
+```text
+notebooks/
+└── Week_1_Iris_Data_Acquisition_Cleaning_EDA_FINAL.ipynb
+```
+
+Run the cells from top to bottom to reproduce the analysis.
 
 ---
 
-## 📂 Output Files
+# 📦 Project Outputs
 
-### Cleaned Dataset
+### 🧹 Cleaned Dataset
 
 ```text
 data/processed/iris_cleaned.csv
 ```
 
-### Visualizations
+### 📈 Visualizations
 
 ```text
-reports/figures/01_missing_values.png
-reports/figures/02_class_distribution.png
-reports/figures/03_petal_scatter.png
-reports/figures/04_correlation_heatmap.png
+reports/figures/
+├── 01_missing_values.png
+├── 02_class_distribution.png
+├── 03_petal_scatter.png
+└── 04_correlation_heatmap.png
 ```
 
-### Project Report
+### 📓 Notebook
 
 ```text
-docs/Week_1_Data_Acquisition_Cleaning_EDA_Report.docx
+notebooks/
+└── Week_1_Iris_Data_Acquisition_Cleaning_EDA_FINAL.ipynb
+```
+
+### 📄 Report
+
+```text
+docs/
+└── Week_1_Data_Acquisition_Cleaning_EDA_Report.docx
 ```
 
 ---
 
-## 🚀 Future Scope
+# 🚀 Future Scope
 
-The cleaned dataset can be used for further machine-learning experiments, including:
+This cleaned dataset can be used for future machine-learning experiments such as:
 
-- Logistic Regression
-- K-Nearest Neighbors
-- Decision Tree Classification
-- Support Vector Machines
-- Feature Scaling
-- Principal Component Analysis (PCA)
-- Cross-Validation
-- Confusion Matrix Analysis
-- Precision, Recall and F1-Score
-- Model Comparison
-
----
-
-## 📄 Project Report
-
-The complete documentation is available in:
-
-**[Week 1 Data Acquisition, Cleaning & EDA Report](docs/Week_1_Data_Acquisition_Cleaning_EDA_Report.docx)**
-
-The report contains dataset information, acquisition methodology, cleaning methodology, Python code, summary statistics, visualizations, EDA findings, and recommendations for further analysis.
+```text
+🤖 Logistic Regression
+📍 K-Nearest Neighbors
+🌳 Decision Tree
+⚡ Support Vector Machine
+📏 Feature Scaling
+🧩 PCA
+🔁 Cross-Validation
+📊 Confusion Matrix
+🎯 Precision / Recall / F1
+🏆 Model Comparison
+```
 
 ---
 
-## 👨‍💻 Author
+# 📄 Documentation
 
-**Vikas Yadav**
+The complete internship report is available here:
 
-Data Science Internship — Week 1
+```text
+docs/
+└── Week_1_Data_Acquisition_Cleaning_EDA_Report.docx
+```
 
-GitHub:  
-https://github.com/Vikas-Yadav-6696
+The report includes:
 
-Repository:  
-https://github.com/Vikas-Yadav-6696/week1-iris-data-analysis
+* Dataset acquisition
+* Data-quality assessment
+* Cleaning methodology
+* Python code
+* Summary statistics
+* Visualizations
+* EDA findings
+* Future analysis
 
 ---
 
-## 📚 References
+# 👨‍💻 Author
 
-1. UCI Machine Learning Repository — Iris Dataset  
+<div align="center">
+
+## **Vikas Yadav**
+
+🎓 Data Science Internship — Week 1
+
+🐍 Python • 📊 Data Science • 🔎 EDA • 🤖 Machine Learning
+
+<br>
+
+[![GitHub](https://img.shields.io/badge/GitHub-Vikas--Yadav--6696-black?style=for-the-badge\&logo=github)](https://github.com/Vikas-Yadav-6696)
+
+[![Repository](https://img.shields.io/badge/Project-Iris%20Data%20Analysis-blue?style=for-the-badge\&logo=github)](https://github.com/Vikas-Yadav-6696/week1-iris-data-analysis)
+
+</div>
+
+---
+
+# 📚 References
+
+1. **UCI Machine Learning Repository — Iris Dataset**
    https://archive.ics.uci.edu/dataset/53/iris
 
-2. Fisher, R. A. (1936). *The use of multiple measurements in taxonomic problems*. Annals of Eugenics, 7(2), 179–188.
+2. Fisher, R. A. (1936).
+   *The use of multiple measurements in taxonomic problems.*
 
-3. Pedregosa et al. (2011). *Scikit-learn: Machine Learning in Python*. Journal of Machine Learning Research, 12, 2825–2830.
+3. Pedregosa et al. (2011).
+   *Scikit-learn: Machine Learning in Python.*
 
 ---
 
-## 📌 Project Status
+# ⭐ Project Status
 
-**Status:** Completed ✅
+<div align="center">
 
-**Project Type:** Data Science / Exploratory Data Analysis
+### ✅ COMPLETED
 
-**Internship Week:** Week 1
+**Week 1 — Data Acquisition, Cleaning & Exploratory Data Analysis**
 
-**Primary Language:** Python
+---
+
+📥 Data Acquisition
+↓
+🧹 Data Cleaning
+↓
+📊 Exploratory Analysis
+↓
+📈 Visualization
+↓
+💡 Insights
+↓
+🚀 Ready for Machine Learning
+
+<br>
+
+**Thanks for visiting this project! 🌸**
+
+</div>
