@@ -90,12 +90,12 @@ week1-iris-data-analysis/
 │
 ├── data/
 │   ├── raw/
-│   │   └── Week_1_Iris_Data_Acquisition_Cleaning_EDA_Complete.ipynb
+│   │   └── README.md
 │   └── processed/
 │       └── iris_cleaned.csv
 │
 ├── notebooks/
-│   └── README.md
+│   └──  Week_1_Iris_Data_Acquisition_Cleaning_EDA_Complete.ipynb
 │
 ├── src/
 │   └── week1_eda.py
