@@ -95,7 +95,7 @@ week1-iris-data-analysis/
 │       └── iris_cleaned.csv
 │
 ├── notebooks/
-│   └──  notebooks/Week_1_Iris_Data_Acquisition_Cleaning_EDA_FINAL.ipynb
+│   └── Week_1_Iris_Data_Acquisition_Cleaning_EDA_FINAL.ipynb
 │
 ├── src/
 │   └── week1_eda.py
